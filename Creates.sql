@@ -11,15 +11,16 @@ create table Cliente (
 	Cli_apellido Varchar(50),
 	Cli_numcarnet Varchar(50) not null unique,
 	Cli_tipo Varchar(1) not null,
+    fkTienda integer not null,
 	constraint pk_cliente primary key(Cli_id),
 	constraint check_tipo check(Cli_tipo IN ('J','N'))
 );
 
 create table Cli_lug (
-	fkCliente integer,
-	fkLugar integer,
+	fkCliente integer not null,
+	fkLugar integer not null,
 	Cli_id SERIAL,
-	constraint pk_cli_lug primary key(fkCliente, fkLugar, Cli_id)
+	constraint pk_cli_lug primary key(Cli_id)
 );
 
 create table Lugar (
@@ -27,22 +28,23 @@ create table Lugar (
 	Lug_tipo Varchar(50) not null,
 	Lug_nombre Varchar(50) not null,
 	fkLugar integer,
-	constraint pk_lugar primary key(Lug_id)
+	constraint pk_lugar primary key(Lug_id),
+    constraint check_tipo check(Lug_tipo IN ('Estado','Muncipio','Parroquia'))
 );
 
 create table Usuario (
 	Usu_id SERIAL,
 	Usu_nombre Varchar(50) not null,
 	Usu_contrasena Varchar(50) not null,
-	fkCliente integer,
-	fkRol integer,
+	fkCliente integer not null,
+	fkRol integer not null,
 	constraint pk_usuario primary key(Usu_id)
 );
 
 create table Contacto (
 	Con_id SERIAL,
 	Con_nombre Varchar(50) not null,
-	fkCliente integer,
+	fkCliente integer not null,
 	constraint pk_contacto primary key(Con_id)
 );
 
@@ -50,7 +52,7 @@ create table Telefono(
 	Tel_id SERIAL,
 	Tel_numero Varchar(50) not null,
 	Tel_tipo Varchar(50) not null,
-	fkCliente integer,
+	fkCliente integer not null,
 	constraint pk_telefono primary key(Tel_id)
 );
 
@@ -69,29 +71,32 @@ create table Punto(
 	Pun_id SERIAL,
 	Pun_cantidad integer not null,
 	Pun_fadquirido Date not null,
-	fkPedido integer,
-	fkUsuario integer,
+	fkPedido integer not null,
+	fkUsuario integer not null,
+    fkHistorial integer not null,
 	constraint pk_punto primary key(Pun_id)
 );
 
 create table Metodo_Pago(
 	Met_id SERIAL,
 	Met_nombre_titular Varchar(50) not null,
-	Met_efectivo numeric,
 	Met_fvencimiento Date,
 	Met_num_tarjeta Varchar(50),
 	Met_num_cheque Varchar(50),
 	Met_banco Varchar(50),
 	Met_tipo Varchar(1) not null,
+    fkCliente integer not null,
 	constraint pk_metodo_pago primary key(Met_id),
 	constraint check_met_tipo check(Met_tipo IN ('T','C','E'))
 );
 
 create table Venta_Pago(
 	Ven_id SERIAL,
+    Ven_fpago Date,
+    Ven_montototal Numeric,
 	fkPunto integer,
-	fkPedido integer,
-	fkMetodo_Pago integer,
+	fkPedido integer not null,
+	fkMetodo_Pago integer not null,
 	constraint pk_venta_pago primary key(Ven_id)
 );
 
@@ -107,8 +112,8 @@ create table Descuento(
 	Des_new_precio numeric not null,
 	Des_finicio Date not null,
 	Des_ffinal Date not null,
-	fkDiario integer,
-	fkProducto integer, 
+	fkDiario integer not null,
+	fkProducto integer not null, 
 	constraint pk_descuento primary key(Des_id)
 );
 
