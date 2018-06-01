@@ -218,102 +218,102 @@ create table public.ingrediente(
     constraint pk_ingrediente primary key(Ing_id)
 );
 
-CREATE TABLE public."Ing_ing" (
-    "Ing_id" serial NOT NULL,
-    "FkIngrediente1" integer NOT NULL,
-    "FkIngrediente2" integer NOT NULL,
-    CONSTRAINT "PK_Ing_ing" PRIMARY KEY ("Ing_id")
+CREATE TABLE public.Ing_ing (
+    Ing_id serial NOT NULL,
+    FkIngrediente1 integer NOT NULL,
+    FkIngrediente2 integer NOT NULL,
+    CONSTRAINT PK_Ing_ing PRIMARY KEY (Ing_id)
 );
 
-CREATE TABLE public."Ped_Pro" (
-    "Ped_precio" numeric NOT NULL,
-    "Ped_cantidad" integer NOT NULL,
-    "FkTienda" integer NOT NULL,
-    "FkProducto" integer NOT NULL,
-    "FkPedido" integer NOT NULL,
-    "Ped_id" serial NOT NULL,
-    CONSTRAINT "PK_Ped_pro" PRIMARY KEY ("Ped_id")
+CREATE TABLE public.Ped_Pro (
+    Ped_precio numeric NOT NULL,
+    Ped_cantidad integer NOT NULL,
+    FkTienda integer NOT NULL,
+    FkProducto integer NOT NULL,
+    FkPedido integer NOT NULL,
+    Ped_id serial NOT NULL,
+    CONSTRAINT PK_Ped_pro PRIMARY KEY (Ped_id)
 );
 
-CREATE TABLE public."Pedido_tienda" (
-    "Ped_descripcion" character varying(200)[] NOT NULL,
-    "Ped_id" serial NOT NULL,
-    "FkTienda" integer NOT NULL,
-    "Ped_fpedido" date NOT NULL,
-    CONSTRAINT "PK_Pedido_tienda" PRIMARY KEY ("Ped_id")
+CREATE TABLE public.Pedido_tienda (
+    Ped_descripcion character varying(200)[] NOT NULL,
+    Ped_id serial NOT NULL,
+    FkTienda integer NOT NULL,
+    Ped_fpedido date NOT NULL,
+    CONSTRAINT PK_Pedido_tienda PRIMARY KEY (Ped_id)
 );
 
-CREATE TABLE public."Pre_pro" (
-    "FkProducto" integer NOT NULL,
-    "FkPresupuesto" integer NOT NULL,
-    "Pre_id" serial NOT NULL,
-    "Pre_cantidad" integer NOT NULL,
-    CONSTRAINT "PK_Pre_pro" PRIMARY KEY ("Pre_id")
+CREATE TABLE public.Pre_pro (
+    FkProducto integer NOT NULL,
+    FkPresupuesto integer NOT NULL,
+    Pre_id serial NOT NULL,
+    Pre_cantidad integer NOT NULL,
+    CONSTRAINT PK_Pre_pro PRIMARY KEY (Pre_id)
 );
 
-CREATE TABLE public."Presupuesto" (
-    "Pre_descripcion" character varying(200)[] NOT NULL,
-    "Pre_id" serial NOT NULL,
-    "Pre_fcreacion" date NOT NULL,
-    "Pre_montototal" numeric NOT NULL,
-    CONSTRAINT "PK_Presupuesto" PRIMARY KEY ("Pre_id")
+CREATE TABLE public.Presupuesto (
+    Pre_descripcion character varying(200)[] NOT NULL,
+    Pre_id serial NOT NULL,
+    Pre_fcreacion date NOT NULL,
+    Pre_montototal numeric NOT NULL,
+    CONSTRAINT PK_Presupuesto PRIMARY KEY (Pre_id)
 );
 
-CREATE TABLE public."Privilegio" (
-    "Pri_nombre" character varying(30)[] NOT NULL,
-    "Pri_id" serial NOT NULL,
-    CONSTRAINT "PK_Privilegio" PRIMARY KEY ("Pri_id")
+CREATE TABLE public.Privilegio (
+    Pri_nombre character varying(30)[] NOT NULL,
+    Pri_id serial NOT NULL,
+    CONSTRAINT PK_Privilegio PRIMARY KEY (Pri_id)
 );
 
-CREATE TABLE public."Punto_historial" (
-    "Pun_id" serial NOT NULL,
-    "Pun_finicio" date NOT NULL,
-    "Pun_ffinal" date,
-    "Pun_cantidad" numeric NOT NULL,
-    CONSTRAINT "PK_Punto_historial" PRIMARY KEY ("Pun_id")
+CREATE TABLE public.Punto_historial (
+    Pun_id serial NOT NULL,
+    Pun_finicio date NOT NULL,
+    Pun_ffinal date,
+    Pun_cantidad numeric NOT NULL,
+    CONSTRAINT PK_Punto_historial PRIMARY KEY (Pun_id)
 );
 
-CREATE TABLE public."Rol" (
-    "Rol_tipo" character varying(50)[] NOT NULL,
-    "Rol_id" serial NOT NULL,
-    CONSTRAINT "PK_Rol" PRIMARY KEY ("Rol_id")
+CREATE TABLE public.Rol (
+    Rol_tipo character varying(50)[] NOT NULL,
+    Rol_id serial NOT NULL,
+    CONSTRAINT PK_Rol PRIMARY KEY (Rol_id)
 );
 
-CREATE TABLE public."Rol_Priv" (
-    "FkRol" integer NOT NULL,
-    "FkPrivilegio" integer NOT NULL,
-    "Rol_id" serial NOT NULL,
-    CONSTRAINT "PK_Rol_priv" PRIMARY KEY ("Rol_id")
+CREATE TABLE public.Rol_Priv (
+    FkRol integer NOT NULL,
+    FkPrivilegio integer NOT NULL,
+    Rol_id serial NOT NULL,
+    CONSTRAINT PK_Rol_priv PRIMARY KEY (Rol_id)
 );
 
-CREATE TABLE public."Sta_ped" (
-    "Sta_finicial" date NOT NULL,
-    "Sta_ffinal" date,
-    "FkStatus" integer NOT NULL,
-    "FkPedido" integer NOT NULL,
-    "Sta_id" serial NOT NULL,
-    CONSTRAINT "PK_Sta_ped" PRIMARY KEY ("Sta_id")
+CREATE TABLE public.Sta_ped (
+    Sta_finicial date NOT NULL,
+    Sta_ffinal date,
+    FkStatus integer NOT NULL,
+    FkPedido integer NOT NULL,
+    Sta_id serial NOT NULL,
+    CONSTRAINT PK_Sta_ped PRIMARY KEY (Sta_id)
 );
 
-CREATE TABLE public."Status" (
-    "Sta_nombre" character varying(50)[] NOT NULL,
-    "Sta_id" serial NOT NULL,
-    CONSTRAINT "PK_Status" PRIMARY KEY ("Sta_id")
+CREATE TABLE public.Status (
+    Sta_nombre character varying(50)[] NOT NULL,
+    Sta_id serial NOT NULL,
+    CONSTRAINT PK_Status PRIMARY KEY (Sta_id)
 );
 
-CREATE TABLE public."Tie_Pro" (
-    "Tie_cantidad" integer NOT NULL,
-    "FkProducto" integer NOT NULL,
-    "FkPedido_tienda" integer NOT NULL,
-    "Tie_id" serial NOT NULL,
-    CONSTRAINT "PK_Tie_pro" PRIMARY KEY ("Tie_id")
+CREATE TABLE public.Tie_Pro (
+    Tie_cantidad integer NOT NULL,
+    FkProducto integer NOT NULL,
+    FkPedido_tienda integer NOT NULL,
+    Tie_id serial NOT NULL,
+    CONSTRAINT PK_Tie_pro PRIMARY KEY (Tie_id)
 );
 
-CREATE TABLE public."Tie_sta" (
-    "Tie_finicial" date NOT NULL,
-    "Tie_ffinal" date,
-    "FkStatus" integer NOT NULL,
-    "FkPedido_tienda" integer NOT NULL,
-    "Tie_id" serial NOT NULL,
-    CONSTRAINT "PK_Tie_sta" PRIMARY KEY ("Tie_id")
+CREATE TABLE public.Tie_sta (
+    Tie_finicial date NOT NULL,
+    Tie_ffinal date,
+    FkStatus integer NOT NULL,
+    FkPedido_tienda integer NOT NULL,
+    Tie_id serial NOT NULL,
+    CONSTRAINT PK_Tie_sta PRIMARY KEY (Tie_id)
 );
