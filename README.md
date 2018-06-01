@@ -1,1 +1,1 @@
-# CandyUCAB_sql
+Creates, alters, inserts y deletes de CandyUCAB
