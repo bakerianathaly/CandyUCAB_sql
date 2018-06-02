@@ -24,7 +24,7 @@ create table Cli_lug (
 );
 
 create table Lugar (
-	Lug_id SERIAL,
+	Lug_id integer,
 	Lug_tipo Varchar(50) not null,
 	Lug_nombre Varchar(50) not null,
 	fkLugar integer,
