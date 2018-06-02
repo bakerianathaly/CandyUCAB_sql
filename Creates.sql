@@ -29,7 +29,7 @@ create table Lugar (
 	Lug_nombre Varchar(50) not null,
 	fkLugar integer,
 	constraint pk_lugar primary key(Lug_id),
-    constraint check_tipo check(Lug_tipo IN ('Estado','Muncipio','Parroquia'))
+    constraint check_tipo check(Lug_tipo IN ('Estado','Municipio','Parroquia'))
 );
 
 create table Usuario (
