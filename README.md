@@ -1,1 +1,6 @@
-Creates, alters, inserts y deletes de CandyUCAB
+Sentencias de SQL para CandyUCAB
+
+- Creates
+- Inserts
+- Drops
+- Alters
