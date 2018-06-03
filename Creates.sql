@@ -1,6 +1,6 @@
 create table Cliente (
 	Cli_id SERIAL,
-	Cli_rif Varchar(50) not null,
+	Cli_rif Varchar(50) not null unique ,
 	Cli_correo Varchar(50) not null,
 	Cli_pagina_web Varchar(50),
 	Cli_total_capital numeric,
@@ -20,6 +20,8 @@ create table Cli_lug (
 	fkCliente integer not null,
 	fkLugar integer not null,
 	Cli_id SERIAL,
+	Cli_tipo varchar(2) not null,
+	constraint check_tipo_lug check(Cli_tipo IN ('F','P','FP')),
 	constraint pk_cli_lug primary key(Cli_id)
 );
 
