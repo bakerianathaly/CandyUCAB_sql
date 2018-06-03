@@ -9,7 +9,7 @@ create table Cliente (
 	Cli_ci integer unique,
 	Cli_nombre Varchar(50),
 	Cli_apellido Varchar(50),
-	Cli_numcarnet Varchar(50) not null unique,
+	Cli_numcarnet Varchar(50) unique,
 	Cli_tipo Varchar(1) not null,
     fkTienda integer not null,
 	constraint pk_cliente primary key(Cli_id),
