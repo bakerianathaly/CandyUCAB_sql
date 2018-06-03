@@ -36,9 +36,11 @@ create table Usuario (
 	Usu_id SERIAL,
 	Usu_nombre Varchar(50) not null,
 	Usu_contrasena Varchar(50) not null,
+	Usu_tipo Varchar(10) not null,
 	fkCliente integer not null,
 	fkRol integer not null,
-	constraint pk_usuario primary key(Usu_id)
+	constraint pk_usuario primary key(Usu_id),
+	constraint check_tipo_usuario check(Usu_tipo IN ('Cliente','Empleado'))
 );
 
 create table Contacto (
