@@ -39,6 +39,7 @@ create table Usuario (
 	Usu_nombre Varchar(50) not null,
 	Usu_contrasena Varchar(50) not null,
 	Usu_tipo Varchar(10) not null,
+	Usu_remember_token Varchar(100),
 	fkCliente integer not null,
 	fkRol integer not null,
 	constraint pk_usuario primary key(Usu_id),
@@ -184,6 +185,7 @@ create table public.producto(
     Pro_textura varchar(50) not null,
     Pro_puntuacion integer not null,
     Pro_azucar boolean,
+    Pro_ruta_imagen varchar(50),
     fksabor integer not null,
     fktipo integer not null,
     constraint pk_producto primary key(Pro_id)

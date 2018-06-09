@@ -1,0 +1,33 @@
+Insert into Sabor (Sab_tipo, Sab_nombre) values 
+('Frutal', 'Fresa'),
+('Frutal', 'Lima'),
+('Frutal','Citrico'),
+('Frutal', 'Melocoton'),
+('Frutal','Patilla'),
+('Frutal','Manzana'),
+('Frutal','Piña'),
+('Frutal', 'Cereza'),
+('Otro', 'Eucalipto'),
+('Otro', 'Cola'),
+('Combinacion', 'Miel y menta'),
+('Combinacion', 'Limon y melisa'),
+('Combinacion', 'Naranja y limon fresh con Xylitol'),
+('Base Chocolate' , 'Cafe expreso'),
+('Base Chocolate' , 'Capuccino'),
+('Base Chocolate' , 'Fresa con nata'),
+('Base Chocolate' , 'Nata y mouse de limon');
+
+Insert into Tipo (Tip_nombre) values 
+('Normal'),
+('Macizo'),
+('Con chicle'),
+('Piruleta'),
+('Bombon'),
+('Gelatina'),
+('Algodon de azucar'),
+('Chocolate de fruta'),
+('Recaliz sin azucar'),
+('Picantes'),
+('Acidos'),
+('Colorantes que tiñen la lengua'),
+('Otro');
