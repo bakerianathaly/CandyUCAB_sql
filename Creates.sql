@@ -184,7 +184,7 @@ create table public.producto(
     Pro_relleno varchar(50),
     Pro_textura varchar(50) not null,
     Pro_puntuacion integer not null,
-    Pro_azucar boolean,
+    Pro_descripcion varchar(300),
     Pro_ruta_imagen varchar(50),
     fksabor integer not null,
     fktipo integer not null,

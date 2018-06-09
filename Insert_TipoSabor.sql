@@ -9,6 +9,7 @@ Insert into Sabor (Sab_tipo, Sab_nombre) values
 ('Frutal', 'Cereza'),
 ('Otro', 'Eucalipto'),
 ('Otro', 'Cola'),
+('Otro', 'Menta'),
 ('Combinacion', 'Miel y menta'),
 ('Combinacion', 'Limon y melisa'),
 ('Combinacion', 'Naranja y limon fresh con Xylitol'),
