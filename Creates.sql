@@ -1,7 +1,7 @@
 create table Cliente (
 	Cli_id SERIAL,
 	Cli_rif Varchar(50) not null unique ,
-	Cli_correo Varchar(50) not null,
+	Cli_correo Varchar(50) not null unique,
 	Cli_pagina_web Varchar(50),
 	Cli_total_capital numeric,
 	Cli_razon_social Varchar(50),
