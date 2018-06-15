@@ -242,7 +242,7 @@ CREATE TABLE public.Ped_Pro (
 );
 
 CREATE TABLE public.Pedido_tienda (
-    Ped_descripcion character varying(200)[] NOT NULL,
+    Ped_descripcion varchar(500) NOT NULL,
     Ped_id serial NOT NULL,
     FkTienda integer NOT NULL,
     Ped_fpedido date NOT NULL,
@@ -258,7 +258,7 @@ CREATE TABLE public.Pre_pro (
 );
 
 CREATE TABLE public.Presupuesto (
-    Pre_descripcion character varying(200)[] NOT NULL,
+    Pre_descripcion varchar(500) NOT NULL,
     Pre_id serial NOT NULL,
     Pre_fcreacion date NOT NULL,
     Pre_montototal numeric NOT NULL,
@@ -266,7 +266,7 @@ CREATE TABLE public.Presupuesto (
 );
 
 CREATE TABLE public.Privilegio (
-    Pri_nombre character varying(30)[] NOT NULL,
+    Pri_nombre varchar(30) NOT NULL,
     Pri_id serial NOT NULL,
     CONSTRAINT PK_Privilegio PRIMARY KEY (Pri_id)
 );
@@ -280,7 +280,7 @@ CREATE TABLE public.Punto_historial (
 );
 
 CREATE TABLE public.Rol (
-    Rol_tipo character varying(50)[] NOT NULL,
+    Rol_tipo varchar(50) NOT NULL,
     Rol_id serial NOT NULL,
     CONSTRAINT PK_Rol PRIMARY KEY (Rol_id)
 );
@@ -302,7 +302,7 @@ CREATE TABLE public.Sta_ped (
 );
 
 CREATE TABLE public.Status (
-    Sta_nombre character varying(50)[] NOT NULL,
+    Sta_nombre varchar(50) NOT NULL,
     Sta_id serial NOT NULL,
     CONSTRAINT PK_Status PRIMARY KEY (Sta_id)
 );
