@@ -262,6 +262,7 @@ CREATE TABLE public.Presupuesto (
     Pre_id serial NOT NULL,
     Pre_fcreacion date NOT NULL,
     Pre_montototal numeric NOT NULL,
+		FkUsuario integer NOT NULL,
     CONSTRAINT PK_Presupuesto PRIMARY KEY (Pre_id)
 );
 

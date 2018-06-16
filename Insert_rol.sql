@@ -3,4 +3,5 @@ Insert into Rol (rol_tipo) values
 ('Gerente de empresa'),
 ('Cliente'),
 ('Gerente de tienda'),
-('Gerente de recursos humanos');
+('Gerente de recursos humanos'),
+('Gerente general de promociones');
