@@ -38,4 +38,5 @@ Insert into Tienda (tie_tipo, fklugar) values
 ('MiniCandyUCAB', (Select lug_id from public.lugar where lug_nombre='Maiquetía' and lug_tipo='Parroquia')),
 ('MiniCandyUCAB', (Select lug_id from public.lugar where lug_nombre='Bermúdez' and lug_tipo='Municipio')),
 ('MiniCandyUCAB', (Select lug_id from public.lugar where lug_nombre='Miranda' and lug_tipo='Municipio' and fklugar=1610)),
-('MiniCandyUCAB', (Select lug_id from public.lugar where lug_nombre='Trujillo' and lug_tipo='Municipio'));
+('MiniCandyUCAB', (Select lug_id from public.lugar where lug_nombre='Trujillo' and lug_tipo='Municipio')),
+('CandyUCAB', (Select lug_id from public.lugar where lug_nombre='Distrito Capital' and lug_tipo='Estado'));
