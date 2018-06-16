@@ -103,7 +103,7 @@ Insert into Cliente (Cli_rif, Cli_correo, Cli_tipo, Cli_pagina_web, Cli_total_ca
     (Select T.tie_id
     FROM Tienda T, Lugar L
     Where L.lug_nombre= 'Petare' and T.fklugar= L.lug_id)),
-('J134520000','codelife@gmail.com','J','codelife.com',123100000009002.2123,'C.A','Servicios informaticos',
+('J543458800','codetime@gmail.com','J','codetime.com',123100000009002.2123,'C.A','Servicios informaticos',
     (Select T.tie_id
     FROM Tienda T, Lugar L
     Where L.lug_nombre= 'Atanasio Girardot' and T.fklugar= L.lug_id)),
