@@ -67,6 +67,9 @@ alter table Pedido
 alter table Pedido
     add constraint fkUsuario foreign key(fkUsuario) references Usuario (Usu_id);
 
+alter table Presupuesto
+    add constraint fkUsuario foreign key(FkUsuario) references Usuario(Usu_id);    
+
 alter table Punto
     add constraint fkPedido foreign key(fkPedido) references Pedido(Ped_id);
 
