@@ -142,8 +142,10 @@ create table public.Departamento (
 create table public.Empleado (
     Emp_id serial,
     Emp_nombre varchar(50) not null,
+    Emp_apellido varchar(50) not null,
     Emp_fecha date not null,
     Emp_ci integer not null,
+    fkdepartamento integer not null,
     constraint pk_empleado primary key(Emp_id)
 );
 
@@ -256,6 +258,7 @@ CREATE TABLE public.Pre_pro (
     FkPresupuesto integer NOT NULL,
     Pre_id serial NOT NULL,
     Pre_cantidad integer NOT NULL,
+    Pre_precio float NOT NULL,
     CONSTRAINT PK_Pre_pro PRIMARY KEY (Pre_id)
 );
 
