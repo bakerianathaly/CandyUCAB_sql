@@ -128,3 +128,5 @@ Alter table Tie_pro add constraint fktie_pro_pedido_tienda foreign key (FkPedido
 Alter table Tie_sta add constraint fktie_sta_status foreign key (FkStatus) references Status(sta_id);
 
 Alter table Tie_sta add constraint fktie_sta_pedido_tienda foreign key (FkPedido_tienda) references Pedido_tienda (ped_id);
+
+Alter table empleado add constraint fkdepartamento foreign key (fkdepartamento) references departamtento(dep_id);
