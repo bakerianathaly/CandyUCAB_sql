@@ -117,6 +117,7 @@ create table Descuento(
 	Des_new_precio numeric not null,
 	Des_finicio Date not null,
 	Des_ffinal Date not null,
+	Des_cantidad integer not null,
 	fkDiario integer not null,
 	fkProducto integer not null,
 	constraint pk_descuento primary key(Des_id)
@@ -142,6 +143,7 @@ create table public.Empleado (
     Emp_id serial,
     Emp_nombre varchar(50) not null,
     Emp_fecha date not null,
+    Emp_ci integer not null,
     constraint pk_empleado primary key(Emp_id)
 );
 
