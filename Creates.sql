@@ -144,12 +144,22 @@ create table public.Empleado (
     Emp_nombre varchar(50) not null,
     Emp_apellido varchar(50) not null,
     Emp_fecha date not null,
-    Emp_ci integer not null,
+    Emp_ci integer not null unique,
     fkdepartamento integer not null,
     constraint pk_empleado primary key(Emp_id)
 );
 
-create table public.Horario_empleado(
+create table Asistencia(
+	Asi_id serial,
+	Fkempleado integer not null,
+	Asi_fentrada date not null,
+	Asi_fsalida date not null,
+	Asi_tipo varchar(12),
+	constraint pk_asistencia primary key(Asi_id),
+	constraint check_tipo_asistencia check (Asi_tipo in ('Asistente', 'Inasistente'))
+);
+
+/*create table public.Horario_empleado(
     Hor_id serial,
     fkempleado integer not null,
     fkhorario integer not null,
@@ -163,7 +173,7 @@ create table public.Horario (
     Hor_hora_salida date not null,
     constraint pk_horario primary key(Hor_id),
     constraint check_hor_dia check (Hor_dia in('lunes','martes','miercoles','jueves','viernes','sabado','domingo'))
-);
+);*/
 
 create table public.Pasillo (
     Pas_id serial,

@@ -4,11 +4,11 @@ alter table public.tienda
 alter table public.Departamento
     add constraint fktienda foreign key(fktienda) references Tienda(Tie_id);
 
-alter table public.Horario_empleado
+/*alter table public.Horario_empleado
     add constraint fkempleado foreign key(fkempleado) references Empleado(Emp_id);
 
 alter table public.Horario_empleado
-    add constraint fkhorario foreign key(fkhorario) references Horario(Hor_id);
+    add constraint fkhorario foreign key(fkhorario) references Horario(Hor_id); */
 
 alter table public.Pasillo
     add constraint fktienda foreign key(fktienda) references Tienda(Tie_id);
@@ -33,6 +33,9 @@ alter table public.Pro_inv
 
 alter table public.Ing_pro
     add constraint fkproducto foreign key(fkproducto) references Producto(Pro_id);
+
+alter table Asistencia
+    add constraint fkAsistencia_Empleado foreign key (Fkempleado) references Empleado(Emp_ci);
 
 alter table public.Ing_pro
     add constraint fkingrediente foreign key(fkingrediente) references Ingrediente(Ing_id);
@@ -68,7 +71,7 @@ alter table Pedido
     add constraint fkUsuario foreign key(fkUsuario) references Usuario (Usu_id);
 
 alter table Presupuesto
-    add constraint fkUsuario foreign key(FkUsuario) references Usuario(Usu_id);    
+    add constraint fkUsuario foreign key(FkUsuario) references Usuario(Usu_id);
 
 alter table Punto
     add constraint fkPedido foreign key(fkPedido) references Pedido(Ped_id);
@@ -129,4 +132,4 @@ Alter table Tie_sta add constraint fktie_sta_status foreign key (FkStatus) refer
 
 Alter table Tie_sta add constraint fktie_sta_pedido_tienda foreign key (FkPedido_tienda) references Pedido_tienda (ped_id);
 
-Alter table empleado add constraint fkdepartamento foreign key (fkdepartamento) references departamtento(dep_id);
+Alter table empleado add constraint fkdepartamento foreign key (fkdepartamento) references departamento(dep_id);
