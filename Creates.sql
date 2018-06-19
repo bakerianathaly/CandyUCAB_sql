@@ -200,6 +200,7 @@ create table public.producto(
     Pro_puntuacion integer not null,
     Pro_descripcion varchar(300),
     Pro_ruta_imagen varchar(50),
+    Pro_precio numeric not null,
     fksabor integer not null,
     fktipo integer not null,
     constraint pk_producto primary key(Pro_id)
