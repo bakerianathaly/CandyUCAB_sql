@@ -152,8 +152,8 @@ create table public.Empleado (
 create table Asistencia(
 	Asi_id serial,
 	Fkempleado integer not null,
-	Asi_fentrada date not null,
-	Asi_fsalida date not null,
+	Asi_fentrada timestamp not null,
+	Asi_fsalida timestamp not null,
 	Asi_tipo varchar(12),
 	constraint pk_asistencia primary key(Asi_id),
 	constraint check_tipo_asistencia check (Asi_tipo in ('Asistente', 'Inasistente'))
