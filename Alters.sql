@@ -133,3 +133,5 @@ Alter table Tie_sta add constraint fktie_sta_status foreign key (FkStatus) refer
 Alter table Tie_sta add constraint fktie_sta_pedido_tienda foreign key (FkPedido_tienda) references Pedido_tienda (ped_id);
 
 Alter table empleado add constraint fkdepartamento foreign key (fkdepartamento) references departamento(dep_id);
+
+ALTER DATABASE "CandyUCAB" SET datestyle TO "ISO, DMY";
