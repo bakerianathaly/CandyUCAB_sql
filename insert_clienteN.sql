@@ -78,4 +78,6 @@ Insert into Cliente (Cli_ci ,Cli_rif, Cli_nombre ,Cli_apellido, Cli_correo, Cli_
 (28812258, 'J29506520' ,'Hugo', 'Dávila', 'Berta_Carrero@yahoo.com', 'N' ,37), 
 (19964857, 'J62357568' ,'Rafael', 'Cortez', 'Carla25@yahoo.com', 'N' ,38), 
 (26407085, 'J60294302' ,'Amalia', 'Ozuna', 'Martn_Tamez@gmail.com', 'N' ,39), 
-(17940181, 'J6127492' ,'Norma', 'Jaramillo', 'Dorotea42@yahoo.com', 'N' ,40);
+(12432454, 'J1234485' ,'Norma', 'Jaramillo', 'Dorotea42@yahoo.com', 'N' ,40),
+(23435454, 'J1237473' ,'Pedro', 'Jaramillo', 'Pedro423@yahoo.com', 'N' ,41),
+(13444556, 'J6586874' ,'Juan', 'Gonzales', 'Juan445@yahoo.com', 'N' ,41);

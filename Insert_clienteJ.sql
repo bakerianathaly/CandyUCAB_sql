@@ -318,4 +318,6 @@ Insert into Cliente (Cli_rif, Cli_correo, Cli_tipo, Cli_pagina_web, Cli_total_ca
 ('J780001935','cinex@gmail.com','J','cinex.com',657600812301893028921312.6545623,'C.A','Servicios de entretenimiento',
     (Select T.tie_id
     FROM Tienda T, Lugar L
-    Where L.lug_nombre= 'Trujillo' and T.fklugar= L.lug_id));
+    Where L.lug_nombre= 'Trujillo' and T.fklugar= L.lug_id)),
+('J45839487','palace@gmail.com','J','palace.com',54365654721312.6545623,'C.A','Marca de ropa',41),
+('J6456897','off-white@gmail.com','J','off-white.com',54365654721314363462.6545623,'C.A','Marca de ropa',41);
