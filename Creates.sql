@@ -40,7 +40,8 @@ create table Usuario (
 	Usu_contrasena Varchar(50) not null,
 	Usu_tipo Varchar(10) not null,
 	Usu_remember_token Varchar(100),
-	fkCliente integer not null,
+	fkCliente integer,
+	fkEmpleado integer,
 	fkRol integer not null,
 	constraint pk_usuario primary key(Usu_id),
 	constraint check_tipo_usuario check(Usu_tipo IN ('Cliente','Empleado'))
@@ -159,22 +160,6 @@ create table Asistencia(
 	constraint check_tipo_asistencia check (Asi_tipo in ('Asistente', 'Inasistente'))
 );
 
-/*create table public.Horario_empleado(
-    Hor_id serial,
-    fkempleado integer not null,
-    fkhorario integer not null,
-    constraint pk_horario_empleado primary key(Hor_id)
-);
-
-create table public.Horario (
-    Hor_id serial,
-    Hor_dia varchar(10) not null,
-    Hor_hora_entrada date not null,
-    Hor_hora_salida date not null,
-    constraint pk_horario primary key(Hor_id),
-    constraint check_hor_dia check (Hor_dia in('lunes','martes','miercoles','jueves','viernes','sabado','domingo'))
-);*/
-
 create table public.Pasillo (
     Pas_id serial,
     Pas_num_anaquel integer not null,
@@ -208,6 +193,7 @@ create table public.producto(
 
 create table public.Pro_inv (
     Pro_id serial,
+		Pro_cantidad integer not null,
     fkproducto integer not null,
     fkinventario integer not null,
     constraint pk_pro_inv primary key(Pro_id)
