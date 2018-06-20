@@ -247,6 +247,7 @@ CREATE TABLE public.Pedido_tienda (
     Ped_id serial NOT NULL,
     FkTienda integer NOT NULL,
     Ped_fpedido date NOT NULL,
+    fkpedido integer NOT NULL,
     CONSTRAINT PK_Pedido_tienda PRIMARY KEY (Ped_id)
 );
 
