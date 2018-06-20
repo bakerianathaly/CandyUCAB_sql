@@ -4,12 +4,6 @@ alter table public.tienda
 alter table public.Departamento
     add constraint fktienda foreign key(fktienda) references Tienda(Tie_id);
 
-/*alter table public.Horario_empleado
-    add constraint fkempleado foreign key(fkempleado) references Empleado(Emp_id);
-
-alter table public.Horario_empleado
-    add constraint fkhorario foreign key(fkhorario) references Horario(Hor_id); */
-
 alter table public.Pasillo
     add constraint fktienda foreign key(fktienda) references Tienda(Tie_id);
 
@@ -54,6 +48,9 @@ alter table Lugar
 
 alter table Usuario
     add constraint fkCliente foreign key(fkCliente) references Cliente(Cli_id);
+
+alter table Usuario
+    add constraint fkEmpleado_usuario foreign key(fkEmpleado) references Empleado(Emp_id);
 
 alter table Usuario
     add constraint fkRol foreign key(fkRol) references Rol(Rol_id);
