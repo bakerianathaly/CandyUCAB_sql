@@ -29,7 +29,7 @@ alter table public.Ing_pro
     add constraint fkproducto foreign key(fkproducto) references Producto(Pro_id);
 
 alter table Asistencia
-    add constraint fkAsistencia_Empleado foreign key (Fkempleado) references Empleado(Emp_ci);
+    add constraint fkAsistencia_Empleado foreign key (Fkempleado) references Empleado(Emp_id);
 
 alter table public.Ing_pro
     add constraint fkingrediente foreign key(fkingrediente) references Ingrediente(Ing_id);
