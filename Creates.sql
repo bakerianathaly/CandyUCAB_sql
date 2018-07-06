@@ -153,8 +153,8 @@ create table public.Empleado (
 create table Asistencia(
 	Asi_id serial,
 	Fkempleado integer not null,
-	Asi_fentrada timestamp not null,
-	Asi_fsalida timestamp not null,
+	Asi_fentrada timestamp,
+	Asi_fsalida timestamp,
 	Asi_tipo varchar(12),
 	constraint pk_asistencia primary key(Asi_id),
 	constraint check_tipo_asistencia check (Asi_tipo in ('Asistente', 'Inasistente'))
@@ -247,7 +247,6 @@ CREATE TABLE public.Pedido_tienda (
     Ped_id serial NOT NULL,
     FkTienda integer NOT NULL,
     Ped_fpedido date NOT NULL,
-    fkpedido integer NOT NULL,
     CONSTRAINT PK_Pedido_tienda PRIMARY KEY (Ped_id)
 );
 
